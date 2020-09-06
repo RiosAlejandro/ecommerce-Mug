@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<meta name="autor" content="Alejandro Rios">
+
+		<title></title>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link href="font/css/fontawesome.css" rel="stylesheet">
+   		<link href="font/css/brands.css" rel="stylesheet">
+		<link href="font/css/solid.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+    	
+    	
+    </head>
+
+    <body>
+        
+        <%- include('./partials/header.ejs') %>
+
+        <section>
+            <div class="slider">
+                <ul>
+                    <li><img src="img/alex-gudino-xVkgJEF8nWg-unsplash.jpg" alt="oferta1"></li>
+                    <!--<span>Photo by <a href="https://unsplash.com/@alex_gudino?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Alex Gudino</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>-->
+                    <li><img src="img/andres-vera-BewKTZMv7V0-unsplash.jpg" alt="oferta2"></li>
+                    <!--<span>Photo by <a href="https://unsplash.com/@canonvera?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Andres Vera</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>-->
+                    <li><img src="img/vanesa-conunaese-0I1VPpfmV9I-unsplash.jpg" alt="oferta3"></li>
+                    <!--<span>Photo by <a href="https://unsplash.com/@conunaese?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Vanesa conunaese</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>-->
+                </ul>
+            </div>
+        </section>  
+    
+        <div class="fraseHome">
+            <i class="fas fa-store"></i>
+            <span>¡COMPRA ONLINE Y RECIBE TU PRODUCTO DONDE QUIERAS!</span>
+            <i class="fas fa-shopping-basket"></i>
+        </div>
+
+        <main class="productosGeneral">
+            <div class="subProductosGeneral">
+                <h2>Tazas de vidrio</h2>
+                <div class="contenedor">
+                    <img src="img/taza-vidrio.jpg" alt="Avatar" class="imagenTaza" style="width:100%">
+                    <div class="esconder">
+                      <div class="enviarTaza"><a href="#">John Doe</a></div>
+                    </div>
+                  </div>
+            </div>
+            <div class="subProductosGeneral">
+                <h2>Tazas de cerámica</h2>
+                <div class="contenedor">
+                    <img src="img/taza-ceramico1.jpg" alt="Avatar" class="imagenTaza" style="width:100%">
+                    <div class="esconder">
+                      <div class="enviarTaza"><a href="#">John Doe</a></div>
+                    </div>
+                  </div>
+            </div>
+            <!--<a href='https://www.freepik.es/fotos/maqueta'>Foto de Maqueta creado por freepik - www.freepik.es</a>-->
+            <div class="subProductosGeneral">
+                <h2>Tazas de plastico</h2>
+                <div class="contenedor">
+                    <img src="img/taza-plastico.jpg" alt="Avatar" class="imagenTaza" style="width:100%">
+                    <div class="esconder">
+                      <div class="enviarTaza"><a href="#">John Doe</a></div>
+                    </div>
+                  </div>                
+            </div>
+        </main>
+
+        <%- include('./partials/footer.ejs') %>
+
+    	<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script type="text/javascript" src="js/js-estilo.js"></script>
+		
+    </body>
+
+</html>

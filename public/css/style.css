@@ -1,0 +1,505 @@
+html{
+	font-size: 62.5%; /**reset para rems -62.5% =10px de 16... esta cuenta es para hacer que un rem valga 10px**/
+	box-sizing: border-box;
+}
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+body{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.6rem;
+	line-height: 2;
+}
+
+/** globales**/
+/*.contenedor{
+	max-width: 1200px;
+	width: 95%;
+	margin: 0 auto;
+}*/
+h1, h2, h3, h4{
+	font-family: '';
+}
+
+h1{
+	font-size: 4.8rem;
+}
+h2{
+	font-size: 4rem;
+	line-height: 1;
+}
+h3{
+	font-size: 3.2rem;
+}
+h4{
+	font-size: 2.8rem;
+}
+
+/**********************************************************************************/
+
+/*************header************/
+.portada{
+	width: 100%;
+	height: 17rem;
+	background-color: #000000;
+	color: #ffffff;
+	padding: 1rem 0;
+}
+/*pseudoLogo y buscador*/
+.primeraPortada{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.invisible{
+	width: 18rem;
+}
+.titulo{
+	display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+	flex-grow: 2;
+}
+.titulo h1{
+	margin-bottom: -10px;
+	font-weight: bold;
+}
+.titulo span{
+	letter-spacing: 0.30rem;
+	font-size: 1.8rem;
+}
+.buscador input{
+	max-width: 25rem;
+	min-width: 20.5rem;
+	width: 100%;
+    height: 4.4rem;
+    font-size: 1.6rem;
+    border-radius: 50px;
+    border: none;
+    padding: 0 1.9rem;
+    background: #f0f0f0;
+}
+/*Navegacion e ingreso*/
+.segundaPortada{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 2rem 2rem;
+}
+.navegacion ul{
+	display: flex;
+	flex-flow: row nowrap;
+}
+.navegacion li{
+	list-style: none;
+	margin-right: 2rem;
+	font-size: 2rem;
+}
+.navegacion li:hover{
+	cursor: pointer;
+	color: crimson;
+}
+.ingreso{
+	font-size: 2rem;
+}
+.ingreso:hover{
+	cursor: pointer;
+	color: crimson;
+}
+.ingreso i{
+	margin-right: 0.5rem;
+}
+/*breadcrumb*/
+.breadcrumb{
+	height: 8rem;
+	width: 100%;
+	background-color: #f8f7f7;
+	color: black;
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: center;
+}
+
+/*********************************FOOTER**********************************************/
+.piePagina{
+	background-color: black;
+	height: 17rem;
+	width: 100%;
+	color: crimson;
+}
+/*Contacto, Titulo e Instagram*/
+.pieSuperior{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-around;
+}
+.pieSuperior .titulo:hover{
+	cursor: pointer;
+	color: white;
+}
+.pieSuperior a{
+	flex-grow: 2;
+	text-align: center;
+	font-size: 2rem;
+	color: crimson;
+	text-decoration: none;
+}
+.pieSuperior a i{
+	margin-right: 0.2rem;
+}
+.pieSuperior a:hover > i{
+	color: white;
+}
+hr {
+    margin-top: 1rem;
+    border: 0;
+	border-top: 1px solid rgba(255,255,255,.2);
+	width: 80%;
+}
+/*Copy*/
+.pieInferior{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+
+/************************************CONTACTO************************************/
+/*Quienes somos*/
+.somos{
+	width: 100%;
+	height: 20rem;
+	margin-bottom: 1rem;
+}
+.somos h2{
+	text-align: center;
+	margin-top: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid silver;
+	color: crimson;
+}
+.textoSomos{
+	text-align: center;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: silver;
+	/*opacity: 0.5;*/
+	border-radius: 5px;
+	-webkit-box-shadow: 3px 11px 9px -8px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 11px 9px -8px rgba(0,0,0,0.75);
+	box-shadow: 3px 11px 9px -8px rgba(0,0,0,0.75);
+}
+.textoSomos p{
+	color: black;
+}
+/*Contacto e ubicación*/
+.campoContacto{
+	margin-top: 1rem;
+	display: flex;
+	flex-flow: row nowrap;
+}
+.contacto{
+	width: 100%;
+	padding: 0 4rem;
+}
+.contacto h1{
+	margin-bottom: -10px;
+	font-weight: bold;
+	text-align: center;
+	color: crimson;
+}
+.contacto span{
+	letter-spacing: 0.30rem;
+	font-size: 1.8rem;
+	text-align: center;
+	display: block;
+	color: crimson;
+}
+.contacto p{
+	display: block;
+	background-color: /*#585858*/ silver;
+	color: black;
+	padding-left: 1rem;
+	margin-bottom: 2rem;
+	border-radius: 5px;
+	-webkit-box-shadow: 3px 11px 9px -8px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 11px 9px -8px rgba(0,0,0,0.75);
+	box-shadow: 3px 11px 9px -8px rgba(0,0,0,0.75);
+}
+.ubicacion{
+	width: 100%;
+	/*border: 1px solid silver;*/
+}
+.iframe{
+	width: 50vw;
+}
+
+/*****************************************HOME**********************************************/
+/*Container Principal del Carrousel*/
+.slider{
+	margin-top: 5rem;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	height: 50rem;
+	padding: 1rem;
+	border: 0;
+}
+.slider ul{
+	display: flex;
+	padding: 0;
+	width: 300%;
+	height: 50rem;
+	animation: cambio 15s infinite alternate ease-in;
+}
+.slider li{
+	width: 100%;
+	list-style: none;
+	margin: auto;
+	text-align: center;
+	height: 50rem;									
+}
+
+.slider img{
+	width: 100%;
+	margin: auto;
+	height: 50rem;
+	margin-top: 4rem;
+	/*background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;*/
+}
+@keyframes cambio{
+	0% {margin-left:0;}
+	30% {margin-left:0;}
+								
+	33% {margin-left:-100%;}
+	67% {margin-left:-100%;}
+								
+	70% {margin-left:-200%;}
+	100% {margin-left:-200%;}
+}
+@media only screen and (min-width: 768px){
+	.slider img{
+		width: 100%;
+	}
+}
+
+/*frase home*/
+.fraseHome{
+	margin-top: 5rem;
+    width: 100%;
+    /* height: 15rem; */
+    max-height: 25rem;
+    background: silver;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+    text-align: center;
+}
+.fraseHome span{
+	font-size: 3.8rem;
+}
+.fraseHome i{
+	font-size: 2rem;
+}
+
+/*productos general*/
+.productosGeneral{
+	width: 100%;
+	height: 40rem;
+	padding: 0 2rem;
+	display: flex;
+	flex-flow: row nowrap;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+.subProductosGeneral{
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	/*background: blue;*/
+	padding-bottom: 0.5rem;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.subProductosGeneral h2{
+	text-align: center;
+}
+.contenedor {
+	position: relative;
+	width: 95%;
+	margin: 0 auto;
+} 
+.imagenTaza {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: 35rem;
+	transition: .5s ease;
+	backface-visibility: hidden; 
+}
+.esconder {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+.contenedor:hover .imagenTaza {
+	opacity: 0.3;
+}
+  
+.contenedor:hover .esconder {
+	opacity: 1;
+} 
+.enviarTaza {
+	background-color: #4CAF50;
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+}
+
+
+
+
+/******************************depruebas*/
+.imagine1{
+	background-image: url(../img/alex-gudino-xVkgJEF8nWg-unsplash.jpg);
+	width: 100%;
+	margin: auto;
+	height: 50rem;
+	margin-top: 4rem;
+	background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.imagine2{
+	background-image: url(../img/andres-vera-BewKTZMv7V0-unsplash.jpg);
+	width: 100%;
+	margin: auto;
+	height: 50rem;
+	margin-top: 4rem;
+	background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.imagine3{
+	background-image: url(../img/vanesa-conunaese-0I1VPpfmV9I-unsplash.jpg);
+	width: 100%;
+	margin: auto;
+	height: 50rem;
+	margin-top: 4rem;
+	background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*****************************DETALLE PRODUCTO**********************/
+.zonaGaleria{
+	width: 50%;
+	height: 50rem;
+	background-color: silver;
+	display: flex;
+	flex-flow: column nowrap;
+	margin-top: 5rem;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	margin-bottom: 5rem;
+}
+.imagenPrincipalGaleria{
+	height: 40rem;
+}
+.imagenPrincipalGaleria img{
+	max-height: 39rem;
+}
+.visibled{
+	display: none;
+}
+.visibled:nth-child(1){
+	display: block;
+}
+.galeriaMiniatura{
+	display: flex;
+	flex-flow: row wrap;
+}
+.galeriaMiniatura span{
+	display: block;
+	width: 5rem;
+	height: 4rem;
+	border: 1px solid black;
+	margin-right: 2rem;
+}
+.galeriaMiniatura span:hover{
+	cursor: pointer;
+}
+
+
+/***********************************INGRESAR*********************/
+.ingresar{
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+.ingresar h2{
+	margin-bottom: 5rem;
+}
+.campoIndividual{
+	display: flex;
+	flex-flow: column nowrap;
+	margin-bottom: 1rem;
+}
+.campoIndividual label{
+	text-align: justify;
+}
+.campoIndividual input{
+	border-radius: 5px;
+}
+.formRegistrarse{
+	margin-top: 2rem;
+	text-align: justify;
+}
+.formRegistrarse a{
+	color: black;
+}
+.botomIngreso{
+	text-align: end;
+}
+.botomIngreso button{
+	border-radius: 5px;
+}
+
+/*************************************REGISTRO************************************/
+.registro{
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-bottom: 5rem;
+}
+.campoFormularioRegistro{
+	display: flex;
+	flex-flow: column nowrap;
+}
+.campoFormularioRegistro label{
+	text-align: justify;
+}
+.campoFormularioRegistro input{
+	margin-bottom: 1.5rem;
+	border-radius: 5px;
+}

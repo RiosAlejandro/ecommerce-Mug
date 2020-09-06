@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<meta name="autor" content="Alejandro Rios">
+
+		<title></title>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link href="font/css/fontawesome.css" rel="stylesheet">
+   		<link href="font/css/brands.css" rel="stylesheet">
+		<link href="font/css/solid.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+    	
+    	
+    </head>
+
+    <body>
+        
+        <%- include('./partials/header.ejs') %>
+
+        <div class="ingresar">
+            <h2>Ingreso</h2>
+            <form action="" method="">
+                <div class="campoIndividual">
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" name="mail">
+                </div>
+                <div class="campoIndividual">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena">
+                </div>
+                <div class="formRegistrarse">
+                    <a href="#">Registrarse</a>
+                </div>
+                <div class="botomIngreso">
+                    <button type="submit">Ingresar</button>
+                </div>
+            </form>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
+
+    	<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script type="text/javascript" src="js/js-estilo.js"></script>
+		
+    </body>
+
+</html>
