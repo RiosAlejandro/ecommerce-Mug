@@ -24,10 +24,22 @@
 
         <div class="ingresar">
             <h2>Ingreso</h2>
-            <form action="" method="">
+
+            <% if (typeof errors != 'undefined') { %>
+                <p style="color: red">ERROR</p>
+                <ul>
+                    <% for (let i=0; i < errors.length; i++) { %>
+                        <li>
+                            <%= errors[i].msg %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+
+            <form action="/ingreso" method="POST">
                 <div class="campoIndividual">
                     <label for="mail">Email</label>
-                    <input type="email" id="mail" name="mail">
+                    <input type="email" id="email" name="email">
                 </div>
                 <div class="campoIndividual">
                     <label for="contrasena">Contraseña</label>
