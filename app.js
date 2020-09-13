@@ -5,6 +5,7 @@ const rutaHome = require('./routes/rutaHome.js');
 const contacto = require('./routes/contacto.js');
 const ingreso = require('./routes/ingreso.js');
 const registro = require('./routes/registro.js');
+const admin = require('./routes/adminRouter/admin.js')
 
 const path = require('path');
 const fs = require('fs');
@@ -13,7 +14,7 @@ const session = require('express-session');
 const bcrypt = require('bcrypt');
 
 app.set('view engine', 'ejs');
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname + "/public")));
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -24,6 +25,7 @@ app.use('/contacto', contacto);
 app.use('/ingreso', ingreso);
 app.use('/registro', registro);
 /*app.use('/producto/:idDetalle, armar ruta a detalleProducto.ejs);*/
+app.use('/admin', admin);
 
 
 /*app.get('*', function(req, res){

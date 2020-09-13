@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<meta name="autor" content="Alejandro Rios">
+
+		<title></title>
+
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link href="/font/css/fontawesome.css" rel="stylesheet">
+   		<link href="/font/css/brands.css" rel="stylesheet">
+		<link href="/font/css/solid.css" rel="stylesheet">
+		<link rel="stylesheet" href="/css/style.css">
+    	
+    	
+    </head>
+
+    <body>
+        
+        <%- include('./partials/header.ejs') %>
+
+            <div>
+                <% if (typeof errors != 'undefined') { %>
+                    <p style="color: red">ERROR</p>
+                    <ul>
+                        <% for (let i=0; i < errors.length; i++) { %>
+                            <li>
+                                <%= errors[i].msg %>
+                            </li>
+                        <% } %>
+                    </ul>
+                <% } %>
+            </div>
+
+            <form action="/admin/product/create" method="POST">
+                <div class="campoIndividual">
+                    <label for="idProduct">Id producto</label>
+                    <input type="number" id="idProduct" name="idProduct">
+                </div>
+                <div class="campoIndividual">
+                    <label for="nameProducto">Nombre producto</label>
+                    <input type="text" id="nameProducto" name="nameProducto">
+                </div>
+                <div class="campoIndividual">
+                    <label for="descriptionProduct">Descripción producto</label>
+                    <input type="text" id="descriptionProduct" name="descriptionProduct">
+                </div>
+                <div class="campoIndividual">
+                    <label for="categoryProduct">Categoria producto</label>
+                    <input type="text" id="categoryProduct" name="categoryProduct">
+                </div>
+                <div class="campoIndividual">
+                    <label for="colorProduct">Color producto</label>
+                    <input type="text" id="colorProduct" name="colorProduct">
+                </div>
+                <div class="campoIndividual">
+                    <label for="precioProduct">precio producto</label>
+                    <input type="number" id="precioProduct" name="precioProduct">
+                </div>
+                <div class="campoIndividual">
+                    <label for="imageProduct">Imagen producto</label>
+                    <input type="" id="imageProduct" name="imageProduct">
+                </div>
+                <div class="botomIngreso">
+                    <button type="submit">Ingresar</button>
+                </div>
+            </form>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
+
+    	<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>	
+		<script type="text/javascript" src="/js/js-estilo.js"></script>
+		
+    </body>
+
+</html>
