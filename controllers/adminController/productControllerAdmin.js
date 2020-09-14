@@ -3,7 +3,7 @@ const { check, validationResult, body } = require('express-validator');
 
 const createProducts = {
     createProduct: function(req, res){
-        res.render('createProducts.ejs');
+        res.render('admin/createProducts.ejs');
     },
     addProduct: function(req, res){
         let errors = validationResult(req);
@@ -33,8 +33,14 @@ const createProducts = {
 
             res.redirect('/');
         } else{
-            res.render("createProducts", { errors: errors.errors});
+            res.render("admin/createProducts", { errors: errors.errors});
         }
+        },
+        editController: function(req, res){
+            res.render('admin/editProducts.ejs');
+        },
+        putController: function(req, res){
+            
         }
         
 }

@@ -6,6 +6,7 @@ const contacto = require('./routes/contacto.js');
 const ingreso = require('./routes/ingreso.js');
 const registro = require('./routes/registro.js');
 const admin = require('./routes/adminRouter/admin.js')
+const product = require('./routes/productRouter/product.js');
 
 const path = require('path');
 const fs = require('fs');
@@ -26,6 +27,7 @@ app.use('/ingreso', ingreso);
 app.use('/registro', registro);
 /*app.use('/producto/:idDetalle, armar ruta a detalleProducto.ejs);*/
 app.use('/admin', admin);
+app.use('/product', product);
 
 
 /*app.get('*', function(req, res){

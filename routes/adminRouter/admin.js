@@ -3,9 +3,9 @@ const router = express.Router();
 
 const { check, validationResult, body } = require('express-validator');
 
-const createProduct = require('../../controllers/adminController/createProduct.js');
+const productControllerAdmin = require('../../controllers/adminController/productControllerAdmin.js');
 
-router.get('/product/create', createProduct.createProduct);       
+router.get('/product/create', productControllerAdmin.createProduct);       
 router.post('/product/create', [
     check('idProduct').isInt().withMessage('Id del producto es obligatorio'),
     check('nameProducto').isLength({min: 3}).withMessage('Falta el nombre del producto'),
@@ -13,7 +13,10 @@ router.post('/product/create', [
     check('categoryProduct').isLength().withMessage('Falta la categoría del producto'),
     check('colorProduct').isLength({min: 3}).withMessage('Falta el color del producto'),
     check('precioProduct').isInt().withMessage('Falta el precio del producto')
-] ,createProduct.addProduct); 
+] ,productControllerAdmin.addProduct); 
+
+router.get('/product/:id/edit', productControllerAdmin.editController);
+router.put('/product/:id', productControllerAdmin.putController);
 
 module.exports = router;
 

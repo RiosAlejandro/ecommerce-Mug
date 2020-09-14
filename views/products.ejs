@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+	<%- include('./partials/head.ejs') %>
+
+    <body>
+        
+        <%- include('./partials/header.ejs') %>
+
+        <div class="productosIndividual">
+            <% products.forEach(product => { %>
+            <div class="imagenProducto">
+
+            </div>
+            <div class="pieProducto">
+                <p> <%=product.nameProducto%></p>
+                <p><%= product.precioProduct%></p>
+                <button >
+                    Agregar al carrito 
+                </button>
+                <!--<a href="/product/detail/<%= product.id %>">-->
+            </div>
+            <% }); %>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
+
+    	<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script type="text/javascript" src="js/js-estilo.js"></script>
+		
+    </body>
+
+</html>
