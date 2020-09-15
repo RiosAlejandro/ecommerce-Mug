@@ -5,7 +5,7 @@ const createProducts = {
     createProduct: function(req, res){
         res.render('admin/createProducts.ejs');
     },
-    addProduct: function(req, res){
+    addProduct: function(req, res, next){
         let errors = validationResult(req);
         
         if(errors.isEmpty()){
@@ -16,7 +16,8 @@ const createProducts = {
                 descriptionProduct: req.body.descriptionProduct,
                 categoryProduct: req.body.categoryProduct,
                 colorProduct: req.body.colorProduct,
-                precioProduct: req.body.precioProduct
+                precioProduct: req.body.precioProduct,
+                imageProduct: req.files[0].filename
             };
 
             let baseProducts = fs.readFileSync("./public/data/products.json", {encoding: 'utf-8'});

@@ -44,7 +44,7 @@ const registroController = {
     registro: function(req, res){
         res.render('registro.ejs');
     },
-    crear: function(req, res){
+    crear: function(req, res, next){
         let errors = validationResult(req);
         
         if(errors.isEmpty()){
@@ -55,7 +55,8 @@ const registroController = {
             email: req.body.email,
             usuario: req.body.usuario,
             clave: req.body.clave,
-            telefono: req.body.telefono
+            telefono: req.body.telefono,
+            avatar: req.files[0].filename
         }
        
         let archivoUsuario = fs.readFileSync("./public/data/usuarios.json", { encoding: 'utf-8' });

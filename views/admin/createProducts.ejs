@@ -19,7 +19,7 @@
                 <% } %>
             </div>
 
-            <form action="/admin/product/create" method="POST">
+            <form action="/admin/product/create" method="POST" enctype="multipart/form-data">
                 <div class="campoIndividual">
                     <label for="idProduct">Id producto</label>
                     <input type="number" id="idProduct" name="idProduct">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="campoIndividual">
                     <label for="imageProduct">Imagen producto</label>
-                    <input type="" id="imageProduct" name="imageProduct">
+                    <input type="file" id="imageProduct" name="imageProduct">
                 </div>
                 <div class="botomIngreso">
                     <button type="submit">Ingresar</button>

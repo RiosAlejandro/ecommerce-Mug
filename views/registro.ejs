@@ -8,19 +8,21 @@
         
         <div class="registro">
             <h2>Formulario de registro</h2>
-            <form action="/registro" method="POST" class="campoFormularioRegistro"> 
-                    <label>Nombre: </label>
+            <form action="/registro" method="POST" class="campoFormularioRegistro" enctype="multipart/form-data">
+                    <label for="nombre">Nombre: </label>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
-                    <label>Apellido: </label>
+                    <label for="apellido">Apellido: </label>
                     <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
-                    <label>Correo: </label>
+                    <label for="email">Correo: </label>
                     <input type="email" name="email" id="email" placeholder="Ingrese su correo">
-                    <label>Usuario: </label>
+                    <label for="usuario">Usuario: </label>
                     <input type="text" name="usuario" id="usuario" placeholder="Su nombre de usuario">
-                    <label>Clave: </label>
+                    <label for="clave">Clave: </label>
                     <input type="password" name="clave" id="clave" placeholder="Ingrese su contraseña">
-                    <label>Telefono: </label>
+                    <label for="telefono">Telefono: </label>
                     <input type="number" name="telefono" id="telefono" placeholder="Ingrese su telefono">
+                    <label for="avatar">Avatar: </label>
+                    <input type="file" name="avatar" id="avatar">
                     <div class="botomIngreso">
                         <input type="submit" value="Registrar"><!--<input type="submit" value="registro" class="btn">-->
                     </div>
