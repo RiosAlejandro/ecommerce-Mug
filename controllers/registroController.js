@@ -36,6 +36,10 @@ const registroController = {
             }
             req.session.usuarioLogueado = usuarioALoguearse;
 
+            if(req.body.recordame != undefined){
+                res.cookie('recordame', usuarioALoguearse.email, {maxAge: 60000 * 60 * 60 });
+            }
+
             res.redirect('/');
         }else{
             return res.render('ingreso.ejs', {errors: errors.errors});
@@ -56,7 +60,7 @@ const registroController = {
             usuario: req.body.usuario,
             clave: req.body.clave,
             telefono: req.body.telefono,
-            avatar: req.files[0].filename
+            avatar: req.files[0].filename 
         }
        
         let archivoUsuario = fs.readFileSync("./public/data/usuarios.json", { encoding: 'utf-8' });

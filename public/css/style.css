@@ -419,13 +419,19 @@ hr {
 }
 
 /*****************************DETALLE PRODUCTO**********************/
+.zonaDetalleProducto{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	margin-top: 3rem;
+	padding: 2rem;
+}
 .zonaGaleria{
 	width: 50%;
 	height: 50rem;
 	background-color: silver;
 	display: flex;
 	flex-flow: column nowrap;
-	margin-top: 5rem;
 	align-items: center;
 	align-content: center;
 	justify-content: center;
@@ -514,4 +520,22 @@ hr {
 .campoFormularioRegistro input{
 	margin-bottom: 1.5rem;
 	border-radius: 5px;
+}
+
+/************************************PRODUCTOS**************************/
+.cajaProductosGeneral{
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: 3rem;
+	padding: 1rem;
+}
+.productosIndividual{
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.productosIndividual img{
+	max-width: 100%;
 }

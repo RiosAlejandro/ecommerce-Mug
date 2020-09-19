@@ -6,20 +6,19 @@
         
         <%- include('./partials/header.ejs') %>
 
-        <div class="productosIndividual">
-            <% products.forEach(product => { %>
-                <a href="/product/detail/<%= product.idProduct %>">
-            <div class="imagenProducto">
+        <div class="cajaProductosGeneral">
 
-            </div>
-            <div class="pieProducto">
-                <img src="/img/imgProducts/<%=product.imageProduct%>" alt="">
-                <p> <%=product.nameProducto%></p>
-                <p><%= product.precioProduct%></p>
-                <button >
-                    Agregar al carrito 
-                </button>
-                <!---->
+            <% products.forEach(product => { %>
+            <div class="productosIndividual">  
+           
+                    <img src="/img/imgProducts/<%=product.imageProduct%>" alt="">
+                    <a href="/product/detail/<%= product.idProduct %>">Ver</a>
+                    <p> <%=product.nameProducto%></p>
+                    <p><%= product.precioProduct%></p>
+                    <button >
+                        Agregar al carrito 
+                    </button>
+              
             </div>
             <% }); %>
         </div>
