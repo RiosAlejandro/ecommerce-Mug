@@ -6,47 +6,54 @@
         
         <%- include('./partials/header.ejs') %>
 
-        <div class="ingresar">
-            <h2>Ingreso</h2>
+        <div class="centrarFormIngreso">
+			<div class="zonaIngreso">
+				<div class="tituloFormIngreso">
+					<h1>¡Hola de nuevo!</h1>
+					<span>¡Nos alegramos mucho de volver a verte!</span>
+				</div>
 
-            <% if (typeof errors != 'undefined') { %>
-                <p style="color: red">ERROR</p>
-                <ul>
-                    <% for (let i=0; i < errors.length; i++) { %>
-                        <li>
-                            <%= errors[i].msg %>
-                        </li>
-                    <% } %>
-                </ul>
-            <% } %>
+                <% if (typeof errors != 'undefined') { %>
+                    <p style="color: red">ERROR</p>
+                    <ul>
+                        <% for (let i=0; i < errors.length; i++) { %>
+                            <li>
+                                <%= errors[i].msg %>
+                            </li>
+                        <% } %>
+                    </ul>
+                <% } %>
 
-            <form action="/ingreso" method="POST">
-                <div class="campoIndividual">
-                    <label for="mail">Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="campoIndividual">
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena">
-                </div>
-                <div class="campoIndividual">
-                    <label for="recordame">Recordame</label>
-                    <input type="checkbox" id="recordame" name="recordame">
-                </div>
-                <div class="formRegistrarse">
-                    <a href="#">Registrarse</a>
-                </div>
-                <div class="botomIngreso">
-                    <button type="submit">Ingresar</button>
-                </div>
-            </form>
-        </div>
+				<form action="post" class="zonaFormulario">
+					<div class="datosIngresoForm">
+						<label class="labelFormIngreso" for="email">Correo electrónico</label>
+						<input class="inputFormIngreso" type="email" name="email" id="email">
+
+						<label class="labelFormIngreso" for="contrasena">Contraseña</label>
+						<input class="inputFormIngreso" type="password" name="contrasena" id="contrasena">
+					</div>
+
+					<div class="zonaRecordame">
+						<label for="recordame">Recordarme</label>
+						<input type="checkbox" name="recordame" id="recordame">
+					</div>
+
+					<div class="enviarIngresoForm">
+						<button type="submit">Iniciar sesión</button>
+					</div>
+
+					<div class="zonaRegistrarForm">
+						<p>¿Necesitas una cuenta? <a href="#">Registrarse</a></p>
+					</div>
+				</form>
+			</div>
+		</div>
 
         <%- include('./partials/footer.ejs') %>
 
     	<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>	
-		<script type="text/javascript" src="js/js-estilo.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
 		
     </body>
 

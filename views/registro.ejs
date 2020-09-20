@@ -6,34 +6,53 @@
 
         <%- include('./partials/header.ejs') %>
         
-        <div class="registro">
-            <h2>Formulario de registro</h2>
-            <form action="/registro" method="POST" class="campoFormularioRegistro" enctype="multipart/form-data">
-                    <label for="nombre">Nombre: </label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
-                    <label for="apellido">Apellido: </label>
-                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
-                    <label for="email">Correo: </label>
-                    <input type="email" name="email" id="email" placeholder="Ingrese su correo">
-                    <label for="usuario">Usuario: </label>
-                    <input type="text" name="usuario" id="usuario" placeholder="Su nombre de usuario">
-                    <label for="clave">Clave: </label>
-                    <input type="password" name="clave" id="clave" placeholder="Ingrese su contraseña">
-                    <label for="telefono">Telefono: </label>
-                    <input type="number" name="telefono" id="telefono" placeholder="Ingrese su telefono">
-                    <label for="avatar">Avatar: </label>
-                    <input type="file" name="avatar" id="avatar">
-                    <div class="botomIngreso">
-                        <input type="submit" value="Registrar"><!--<input type="submit" value="registro" class="btn">-->
-                    </div>
-            </form>
-        </div>
+        <div class="centrarFormIngreso centrarFormRegistro">
+			<div class="zonaIngreso">
+				<div class="tituloFormIngreso">
+					<h1>Crear una cuenta</h1>
+				</div>
+
+				<form action="post" class="zonaFormulario">
+					<div class="datosIngresoForm">
+
+                        <label class="labelFormIngreso" for="nombre">Nombre </label>
+                        <input class="inputFormIngreso" type="text" name="nombre" id="nombre">
+
+                        <label class="labelFormIngreso" for="apellido">Apellido </label>
+                        <input class="inputFormIngreso" type="text" name="apellido" id="apellido" >
+
+                        <label class="labelFormIngreso" for="email">Correo electrónico</label>
+						<input class="inputFormIngreso" type="email" name="email" id="email">
+
+                        <label class="labelFormIngreso" for="usuario">Usuario </label>
+                        <input class="inputFormIngreso" type="text" name="usuario" id="usuario" >
+
+                        <label class="labelFormIngreso" for="clave">Contraseña</label>
+                        <input class="inputFormIngreso" type="password" name="clave" id="clave">
+
+                        <label class="labelFormIngreso" for="telefono">Telefono </label>
+                        <input class="inputFormIngreso" type="number" name="telefono" id="telefono" >
+
+                        <label for="avatar">Avatar </label>
+                        <input type="file" name="avatar" id="avatar">
+					</div>
+
+					<div class="enviarIngresoForm">
+						<button type="submit">Continuar</button>
+					</div>
+
+					<div class="zonaRegistrarForm">
+						<a href="#">¿Ya tienes una cuenta?</a>
+					</div>
+				</form>
+			</div>
+		</div>
 
         <%- include('./partials/footer.ejs') %>
 
     	<script src="/js/jquery.min.js"></script>
 		<script src="/js/bootstrap.min.js"></script>	
-		<script type="text/javascript" src="/js/js-estilo.js"></script>
+		<script type="text/javascript" src="/js/index.js"></script>
 		
     </body>
 
