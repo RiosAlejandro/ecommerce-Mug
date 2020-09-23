@@ -13,6 +13,7 @@ const registroController = {
             let archivoUsuario = fs.readFileSync("./public/data/usuarios.json", { encoding: 'utf-8' });
             let usuarios;
             
+
             if (archivoUsuario == "") {
                 usuarios = [];
             }else {

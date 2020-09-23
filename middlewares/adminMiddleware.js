@@ -1,5 +1,6 @@
 function adminMiddleware (req, res, next) {
-    if(req.session.usuarioLogueado != undefined && req.session.usuarioLogueado.email == "alexandro.aa86@gmail.com"){
+    
+    if(req.session.usuarioLogueado != undefined && req.session.usuarioLogueado.usuario == "admin"){
         next();
     }else {
         res.send('Esta página es para invitados');
